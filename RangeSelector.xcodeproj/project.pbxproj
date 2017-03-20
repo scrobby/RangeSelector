@@ -10,6 +10,9 @@
 		C3391A6B1E7FBF5900EDB811 /* RangeSelector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3391A611E7FBF5900EDB811 /* RangeSelector.framework */; };
 		C3391A701E7FBF5900EDB811 /* RangeSelectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3391A6F1E7FBF5900EDB811 /* RangeSelectorTests.swift */; };
 		C3391A721E7FBF5900EDB811 /* RangeSelector.h in Headers */ = {isa = PBXBuildFile; fileRef = C3391A641E7FBF5900EDB811 /* RangeSelector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3391A7C1E7FBFAA00EDB811 /* RangeSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3391A7B1E7FBFAA00EDB811 /* RangeSelector.swift */; };
+		C3391A7E1E7FBFC400EDB811 /* RangeSelectorBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3391A7D1E7FBFC400EDB811 /* RangeSelectorBar.swift */; };
+		C3391A801E7FC0C000EDB811 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3391A7F1E7FC0C000EDB811 /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		C3391A6A1E7FBF5900EDB811 /* RangeSelectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RangeSelectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3391A6F1E7FBF5900EDB811 /* RangeSelectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSelectorTests.swift; sourceTree = "<group>"; };
 		C3391A711E7FBF5900EDB811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3391A7B1E7FBFAA00EDB811 /* RangeSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSelector.swift; sourceTree = "<group>"; };
+		C3391A7D1E7FBFC400EDB811 /* RangeSelectorBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSelectorBar.swift; sourceTree = "<group>"; };
+		C3391A7F1E7FC0C000EDB811 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 			children = (
 				C3391A641E7FBF5900EDB811 /* RangeSelector.h */,
 				C3391A651E7FBF5900EDB811 /* Info.plist */,
+				C3391A7B1E7FBFAA00EDB811 /* RangeSelector.swift */,
+				C3391A7D1E7FBFC400EDB811 /* RangeSelectorBar.swift */,
+				C3391A7F1E7FC0C000EDB811 /* Media.xcassets */,
 			);
 			path = RangeSelector;
 			sourceTree = "<group>";
@@ -149,6 +158,7 @@
 					C3391A601E7FBF5900EDB811 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = DMP3XBRCM8;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					C3391A691E7FBF5900EDB811 = {
@@ -181,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3391A801E7FC0C000EDB811 /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +209,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3391A7E1E7FBFC400EDB811 /* RangeSelectorBar.swift in Sources */,
+				C3391A7C1E7FBFAA00EDB811 /* RangeSelector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +335,7 @@
 		C3391A761E7FBF5900EDB811 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = DMP3XBRCM8;
@@ -334,6 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.carlgoldsmith.RangeSelector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +356,7 @@
 		C3391A771E7FBF5900EDB811 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = DMP3XBRCM8;
@@ -360,6 +376,7 @@
 		C3391A791E7FBF5900EDB811 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = DMP3XBRCM8;
 				INFOPLIST_FILE = RangeSelectorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +389,7 @@
 		C3391A7A1E7FBF5900EDB811 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = DMP3XBRCM8;
 				INFOPLIST_FILE = RangeSelectorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
