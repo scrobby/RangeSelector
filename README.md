@@ -8,7 +8,7 @@ To Do
 
 
 # To Do
-[ ] Finish Readme
-[ ] Add more 'styles'
-[ ] Create default setups (similar to how UIPickerView has UIDatePicker)
-[ ] Create tests
+- [ ] Finish Readme
+- [ ] Add more 'styles'
+- [ ] Create default setups (similar to how UIPickerView has UIDatePicker)
+- [ ] Create tests
