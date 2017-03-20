@@ -1,6 +1,0 @@
-version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
-options: "6dbc325483f7d482bd5ba233df6c24ad"
-build_time: [543313390, 963088000]
-inputs:
-  "/Users/carl/Developer/Pods/RangeSelector/RangeSelector/RangeSelectorBar.swift": [9223372036854775807, 0]
-  "/Users/carl/Developer/Pods/RangeSelector/RangeSelector/RangeSelector.swift": [9223372036854775807, 0]
