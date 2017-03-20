@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RangeSelector"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "A simple range selector for iOS."
 
   s.description  = <<-DESC
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = "RangeSelector/*.{swift,h}"
 
-  s.resource  = "RangeSelector/Media.xcassets"
+  s.resource  = "RangeSelector/Media/*.{png}"
 
   s.framework  = "UIKit"
 
