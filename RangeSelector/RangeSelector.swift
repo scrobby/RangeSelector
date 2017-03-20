@@ -15,11 +15,40 @@ enum RangeSelectorType: Int {
 }
 
 @IBDesignable class RangeSelector: UIControl, UIScrollViewDelegate {
-    var rangeSelectorType: RangeSelectorType = .minMaxValue
+    @IBInspectable var rangeSelectorType: RangeSelectorType = .singleValue
     
-    let barHeight: CGFloat = 29.0
+    //MARK:- Visual Traits
+    //MARK: User-Definable
+    
+    /**
+     * The background image used by the bar.
+     */
+    @IBInspectable var barImage: UIImage? = UIImage(named: "RangeSelectorBarBackground.png")
+    
+    /**
+     * The width of the central line.
+     */
+    @IBInspectable var lineWidth: CGFloat = 2.0
+    
+    /**
+     * The height of the bar itself.
+    */
+    @IBInspectable let barHeight: CGFloat = 29.0
+    
+    /**
+     * The margin between the bottom of the bar and the bottom of the view (you probably don't want to alter this).
+    */
     let bottomMargin: CGFloat = 8
-    let lineHeight: CGFloat = 34
+    
+    /**
+     * The distance by which the line extends beyond the bar itself.
+    */
+    @IBInspectable let lineExtension: CGFloat = 5.0
+    
+    //MARK: Calculated
+    private var lineHeight: CGFloat { return barHeight + lineExtension }
+    
+    
     
     var isSwapping = false
     var maxActive = false {
@@ -58,9 +87,10 @@ enum RangeSelectorType: Int {
         }
     }
     
-    var barImage: UIImage? = UIImage(named: "RangeSelectorBarBackground")
-    
-    var valuesToScrollThrough: [String]? = ["No Min", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6", "11+", "Year 7", "Year 8", "Year 9", "GCSE", "A Level", "Undergrad Yr 1", "Undergrad Yr 2", "Undergrad Yr 3", "No Max"] {
+    /**
+     * An array of string values that can be displayed instaed of just a range of numbers. These will take precedence over the TotalRange.
+    */
+    var valuesToScrollThrough: [String]? {
         didSet {
             if self.valuesToScrollThrough != nil {
                 self.currentMaxValue = valuesToScrollThrough!.count - 1
@@ -68,10 +98,12 @@ enum RangeSelectorType: Int {
         }
     }
     
-    var _totalRange: Int?
+    private var _totalRange: Int?
+    /**
+     * The total range of values that will be displayed to the user. Set this if you are just hoping to display a range of numerical values. If you are using valuesToScrollThrough, you do not need to set this at all.
+     */
     var totalRange: Int {
         get {
-            //custom values will take precedence
             if valuesToScrollThrough != nil {
                 return valuesToScrollThrough!.count
             } else if _totalRange == nil {
@@ -86,11 +118,22 @@ enum RangeSelectorType: Int {
         }
     }
     
+    /**
+     * Adjusts the gap between each variable. Default is 30.
+    */
     var gapBetweenValues: CGFloat = 30.0
-    var sidePadding: CGFloat = 150.0
     
-    fileprivate var _rangeBar: UIView?
-    var rangeBar: UIView {
+    private var _sidePadding: CGFloat?
+    private var sidePadding: CGFloat {
+        if _sidePadding == nil {
+            _sidePadding = UIScreen.main.bounds.width
+        }
+        
+        return _sidePadding!
+    }
+    
+    private var _rangeBar: UIView?
+    private var rangeBar: UIView {
         if _rangeBar == nil {
             _rangeBar = UIView()
             _rangeBar!.translatesAutoresizingMaskIntoConstraints = false
@@ -108,9 +151,7 @@ enum RangeSelectorType: Int {
         return _rangeBar!
     }
     
-    var lineWidth: CGFloat = 2.0
-    
-    fileprivate var _minLine: UIView?
+    private var _minLine: UIView?
     var minLine: UIView {
         if _minLine == nil {
             _minLine = UIView(frame: CGRect(x: 0, y: 0, width: lineWidth, height: lineHeight))
@@ -414,6 +455,9 @@ enum RangeSelectorType: Int {
         self.scrollToPositionForItem(self.maxActive ? self.currentMaxValue : self.currentMinValue)
     }
     
+    /**
+     * Switches the focus to the min label
+    */
     func makeMinActive() {
         self.maxActive = false
     }

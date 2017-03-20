@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>RangeSelectorTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +23,21 @@
 			<true/>
 		</dict>
 		<key>C3391A691E7FBF5900EDB811</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C3391A901E7FD0E200EDB811</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C3391AA31E7FD0E200EDB811</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C3391AAE1E7FD0E200EDB811</key>
 		<dict>
 			<key>primary</key>
 			<true/>

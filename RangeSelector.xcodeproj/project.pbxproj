@@ -11,10 +11,18 @@
 		C3391A701E7FBF5900EDB811 /* RangeSelectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3391A6F1E7FBF5900EDB811 /* RangeSelectorTests.swift */; };
 		C3391A721E7FBF5900EDB811 /* RangeSelector.h in Headers */ = {isa = PBXBuildFile; fileRef = C3391A641E7FBF5900EDB811 /* RangeSelector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3391A7C1E7FBFAA00EDB811 /* RangeSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3391A7B1E7FBFAA00EDB811 /* RangeSelector.swift */; };
-		C3391A7E1E7FBFC400EDB811 /* RangeSelectorBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3391A7D1E7FBFC400EDB811 /* RangeSelectorBar.swift */; };
 		C3391A851E7FC7D000EDB811 /* RangeSelectorBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391A821E7FC7D000EDB811 /* RangeSelectorBarBackground.png */; };
 		C3391A861E7FC7D000EDB811 /* RangeSelectorBarBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391A831E7FC7D000EDB811 /* RangeSelectorBarBackground@2x.png */; };
 		C3391A871E7FC7D000EDB811 /* RangeSelectorBarBackground@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391A841E7FC7D000EDB811 /* RangeSelectorBarBackground@3x.png */; };
+		C3391A941E7FD0E200EDB811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3391A931E7FD0E200EDB811 /* AppDelegate.swift */; };
+		C3391A9E1E7FD0E200EDB811 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3391A9C1E7FD0E200EDB811 /* LaunchScreen.storyboard */; };
+		C3391ABF1E7FD15B00EDB811 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3391A891E7FCBD100EDB811 /* Main.storyboard */; };
+		C3391AC01E7FD16400EDB811 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3391A8B1E7FCBE000EDB811 /* MainViewController.swift */; };
+		C3391AC11E7FD16C00EDB811 /* RangeSelector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3391A611E7FBF5900EDB811 /* RangeSelector.framework */; };
+		C3391AC21E7FD21500EDB811 /* RangeSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3391A7B1E7FBFAA00EDB811 /* RangeSelector.swift */; };
+		C3391AC31E7FD28D00EDB811 /* RangeSelectorBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391A821E7FC7D000EDB811 /* RangeSelectorBarBackground.png */; };
+		C3391AC41E7FD28F00EDB811 /* RangeSelectorBarBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391A831E7FC7D000EDB811 /* RangeSelectorBarBackground@2x.png */; };
+		C3391AC51E7FD29200EDB811 /* RangeSelectorBarBackground@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391A841E7FC7D000EDB811 /* RangeSelectorBarBackground@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +43,15 @@
 		C3391A6F1E7FBF5900EDB811 /* RangeSelectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSelectorTests.swift; sourceTree = "<group>"; };
 		C3391A711E7FBF5900EDB811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3391A7B1E7FBFAA00EDB811 /* RangeSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSelector.swift; sourceTree = "<group>"; };
-		C3391A7D1E7FBFC400EDB811 /* RangeSelectorBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSelectorBar.swift; sourceTree = "<group>"; };
 		C3391A821E7FC7D000EDB811 /* RangeSelectorBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RangeSelectorBarBackground.png; sourceTree = "<group>"; };
 		C3391A831E7FC7D000EDB811 /* RangeSelectorBarBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RangeSelectorBarBackground@2x.png"; sourceTree = "<group>"; };
 		C3391A841E7FC7D000EDB811 /* RangeSelectorBarBackground@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RangeSelectorBarBackground@3x.png"; sourceTree = "<group>"; };
+		C3391A891E7FCBD100EDB811 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Example/Main.storyboard; sourceTree = "<group>"; };
+		C3391A8B1E7FCBE000EDB811 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Example/MainViewController.swift; sourceTree = "<group>"; };
+		C3391A911E7FD0E200EDB811 /* RangeSelectorTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RangeSelectorTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3391A931E7FD0E200EDB811 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = RangeSelectorTest/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		C3391A9D1E7FD0E200EDB811 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C3391A9F1E7FD0E200EDB811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = RangeSelectorTest/Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +67,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3391A6B1E7FBF5900EDB811 /* RangeSelector.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3391A8E1E7FD0E200EDB811 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3391AC11E7FD16C00EDB811 /* RangeSelector.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +95,7 @@
 			children = (
 				C3391A611E7FBF5900EDB811 /* RangeSelector.framework */,
 				C3391A6A1E7FBF5900EDB811 /* RangeSelectorTests.xctest */,
+				C3391A911E7FD0E200EDB811 /* RangeSelectorTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,7 +106,7 @@
 				C3391A641E7FBF5900EDB811 /* RangeSelector.h */,
 				C3391A651E7FBF5900EDB811 /* Info.plist */,
 				C3391A7B1E7FBFAA00EDB811 /* RangeSelector.swift */,
-				C3391A7D1E7FBFC400EDB811 /* RangeSelectorBar.swift */,
+				C3391A881E7FCBAF00EDB811 /* Example */,
 				C3391A811E7FC7D000EDB811 /* Media */,
 			);
 			path = RangeSelector;
@@ -107,6 +129,18 @@
 				C3391A841E7FC7D000EDB811 /* RangeSelectorBarBackground@3x.png */,
 			);
 			path = Media;
+			sourceTree = "<group>";
+		};
+		C3391A881E7FCBAF00EDB811 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				C3391A931E7FD0E200EDB811 /* AppDelegate.swift */,
+				C3391A8B1E7FCBE000EDB811 /* MainViewController.swift */,
+				C3391A9F1E7FD0E200EDB811 /* Info.plist */,
+				C3391A891E7FCBD100EDB811 /* Main.storyboard */,
+				C3391A9C1E7FD0E200EDB811 /* LaunchScreen.storyboard */,
+			);
+			name = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +193,23 @@
 			productReference = C3391A6A1E7FBF5900EDB811 /* RangeSelectorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C3391A901E7FD0E200EDB811 /* RangeSelectorTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3391AB61E7FD0E200EDB811 /* Build configuration list for PBXNativeTarget "RangeSelectorTest" */;
+			buildPhases = (
+				C3391A8D1E7FD0E200EDB811 /* Sources */,
+				C3391A8E1E7FD0E200EDB811 /* Frameworks */,
+				C3391A8F1E7FD0E200EDB811 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RangeSelectorTest;
+			productName = RangeSelectorTest;
+			productReference = C3391A911E7FD0E200EDB811 /* RangeSelectorTest.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -180,6 +231,11 @@
 						DevelopmentTeam = DMP3XBRCM8;
 						ProvisioningStyle = Automatic;
 					};
+					C3391A901E7FD0E200EDB811 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = DMP3XBRCM8;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = C3391A5B1E7FBF5900EDB811 /* Build configuration list for PBXProject "RangeSelector" */;
@@ -188,6 +244,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = C3391A571E7FBF5900EDB811;
 			productRefGroup = C3391A621E7FBF5900EDB811 /* Products */;
@@ -196,6 +253,7 @@
 			targets = (
 				C3391A601E7FBF5900EDB811 /* RangeSelector */,
 				C3391A691E7FBF5900EDB811 /* RangeSelectorTests */,
+				C3391A901E7FD0E200EDB811 /* RangeSelectorTest */,
 			);
 		};
 /* End PBXProject section */
@@ -218,6 +276,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C3391A8F1E7FD0E200EDB811 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3391A9E1E7FD0E200EDB811 /* LaunchScreen.storyboard in Resources */,
+				C3391ABF1E7FD15B00EDB811 /* Main.storyboard in Resources */,
+				C3391AC31E7FD28D00EDB811 /* RangeSelectorBarBackground.png in Resources */,
+				C3391AC41E7FD28F00EDB811 /* RangeSelectorBarBackground@2x.png in Resources */,
+				C3391AC51E7FD29200EDB811 /* RangeSelectorBarBackground@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -225,7 +295,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3391A7E1E7FBFC400EDB811 /* RangeSelectorBar.swift in Sources */,
 				C3391A7C1E7FBFAA00EDB811 /* RangeSelector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,6 +307,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C3391A8D1E7FD0E200EDB811 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3391A941E7FD0E200EDB811 /* AppDelegate.swift in Sources */,
+				C3391AC01E7FD16400EDB811 /* MainViewController.swift in Sources */,
+				C3391AC21E7FD21500EDB811 /* RangeSelector.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -247,6 +326,18 @@
 			targetProxy = C3391A6C1E7FBF5900EDB811 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C3391A9C1E7FD0E200EDB811 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3391A9D1E7FD0E200EDB811 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = RangeSelectorTest;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C3391A731E7FBF5900EDB811 /* Debug */ = {
@@ -415,6 +506,30 @@
 			};
 			name = Release;
 		};
+		C3391AB71E7FD0E200EDB811 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = DMP3XBRCM8;
+				INFOPLIST_FILE = RangeSelectorTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlgoldsmith.RangeSelectorTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C3391AB81E7FD0E200EDB811 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = DMP3XBRCM8;
+				INFOPLIST_FILE = RangeSelectorTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlgoldsmith.RangeSelectorTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -440,6 +555,14 @@
 			buildConfigurations = (
 				C3391A791E7FBF5900EDB811 /* Debug */,
 				C3391A7A1E7FBF5900EDB811 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C3391AB61E7FD0E200EDB811 /* Build configuration list for PBXNativeTarget "RangeSelectorTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3391AB71E7FD0E200EDB811 /* Debug */,
+				C3391AB81E7FD0E200EDB811 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
