@@ -114,7 +114,7 @@ enum RangeSelectorType: Int {
     var minLine: UIView {
         if _minLine == nil {
             _minLine = UIView(frame: CGRect(x: 0, y: 0, width: lineWidth, height: lineHeight))
-            _minLine!.backgroundColor = TutonColor.blue
+            _minLine!.backgroundColor = .blue
             _minLine!.translatesAutoresizingMaskIntoConstraints = false
         }
         
@@ -147,7 +147,7 @@ enum RangeSelectorType: Int {
     var maxLine: UIView {
         if _maxLine == nil {
             _maxLine = UIView(frame: CGRect(x: 0, y: 0, width: lineWidth, height: lineHeight))
-            _maxLine!.backgroundColor = TutonColor.blue
+            _maxLine!.backgroundColor = .blue
             _maxLine!.translatesAutoresizingMaskIntoConstraints = false
         }
         
@@ -466,7 +466,7 @@ enum RangeSelectorType: Int {
         
         if rangeRectangle == nil {
             rangeRectangle = UIView(frame: newFrame)
-            rangeRectangle!.backgroundColor = TutonColor.blue
+            rangeRectangle!.backgroundColor = .blue
             rangeRectangle!.isUserInteractionEnabled = false
             rangeRectangle!.alpha = 0.3
             self.addSubview(rangeRectangle!)
