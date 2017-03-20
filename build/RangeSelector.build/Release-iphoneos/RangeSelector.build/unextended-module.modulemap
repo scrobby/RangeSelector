@@ -1,0 +1,10 @@
+framework module RangeSelector {
+  umbrella header "RangeSelector.h"
+
+  export *
+  module * { export * }
+}
+
+module RangeSelector.__Swift {
+    exclude header "RangeSelector-Swift.h"
+}
