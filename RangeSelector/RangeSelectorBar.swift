@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 @IBDesignable class RangeSelectorBar: UIScrollView {
-    var image: UIImage? = UIImage(named: "RangeSelectorBarBackground")
+    var image: UIImage? = UIImage(named: "RangeSelectorBarBackground.png")
     
     override func draw(_ rect: CGRect) {
         //        if image != nil {

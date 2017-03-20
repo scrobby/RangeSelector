@@ -12,7 +12,9 @@
 		C3391A721E7FBF5900EDB811 /* RangeSelector.h in Headers */ = {isa = PBXBuildFile; fileRef = C3391A641E7FBF5900EDB811 /* RangeSelector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3391A7C1E7FBFAA00EDB811 /* RangeSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3391A7B1E7FBFAA00EDB811 /* RangeSelector.swift */; };
 		C3391A7E1E7FBFC400EDB811 /* RangeSelectorBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3391A7D1E7FBFC400EDB811 /* RangeSelectorBar.swift */; };
-		C3391A801E7FC0C000EDB811 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3391A7F1E7FC0C000EDB811 /* Media.xcassets */; };
+		C3391A851E7FC7D000EDB811 /* RangeSelectorBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391A821E7FC7D000EDB811 /* RangeSelectorBarBackground.png */; };
+		C3391A861E7FC7D000EDB811 /* RangeSelectorBarBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391A831E7FC7D000EDB811 /* RangeSelectorBarBackground@2x.png */; };
+		C3391A871E7FC7D000EDB811 /* RangeSelectorBarBackground@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391A841E7FC7D000EDB811 /* RangeSelectorBarBackground@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +36,9 @@
 		C3391A711E7FBF5900EDB811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3391A7B1E7FBFAA00EDB811 /* RangeSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSelector.swift; sourceTree = "<group>"; };
 		C3391A7D1E7FBFC400EDB811 /* RangeSelectorBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSelectorBar.swift; sourceTree = "<group>"; };
-		C3391A7F1E7FC0C000EDB811 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		C3391A821E7FC7D000EDB811 /* RangeSelectorBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RangeSelectorBarBackground.png; sourceTree = "<group>"; };
+		C3391A831E7FC7D000EDB811 /* RangeSelectorBarBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RangeSelectorBarBackground@2x.png"; sourceTree = "<group>"; };
+		C3391A841E7FC7D000EDB811 /* RangeSelectorBarBackground@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RangeSelectorBarBackground@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +85,7 @@
 				C3391A651E7FBF5900EDB811 /* Info.plist */,
 				C3391A7B1E7FBFAA00EDB811 /* RangeSelector.swift */,
 				C3391A7D1E7FBFC400EDB811 /* RangeSelectorBar.swift */,
-				C3391A7F1E7FC0C000EDB811 /* Media.xcassets */,
+				C3391A811E7FC7D000EDB811 /* Media */,
 			);
 			path = RangeSelector;
 			sourceTree = "<group>";
@@ -93,6 +97,16 @@
 				C3391A711E7FBF5900EDB811 /* Info.plist */,
 			);
 			path = RangeSelectorTests;
+			sourceTree = "<group>";
+		};
+		C3391A811E7FC7D000EDB811 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				C3391A821E7FC7D000EDB811 /* RangeSelectorBarBackground.png */,
+				C3391A831E7FC7D000EDB811 /* RangeSelectorBarBackground@2x.png */,
+				C3391A841E7FC7D000EDB811 /* RangeSelectorBarBackground@3x.png */,
+			);
+			path = Media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,7 +205,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3391A801E7FC0C000EDB811 /* Media.xcassets in Resources */,
+				C3391A851E7FC7D000EDB811 /* RangeSelectorBarBackground.png in Resources */,
+				C3391A861E7FC7D000EDB811 /* RangeSelectorBarBackground@2x.png in Resources */,
+				C3391A871E7FC7D000EDB811 /* RangeSelectorBarBackground@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

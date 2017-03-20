@@ -20,9 +20,9 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/scrobby/RangeSelector.git", :tag => "#{s.version}" }
 
-  s.source_files  = "RangeSelector/**/*.{swift,h}"
+  s.source_files  = "RangeSelector/*.{swift,h}"
 
-  s.resource  = "Media.xcassets"
+  s.resource  = "RangeSelector/Media.xcassets"
 
   s.framework  = "UIKit"
 
