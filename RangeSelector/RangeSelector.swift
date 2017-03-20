@@ -16,80 +16,11 @@ enum RangeSelectorType: Int {
 
 @IBDesignable class RangeSelector: UIControl, UIScrollViewDelegate {
     @IBInspectable var rangeSelectorType: RangeSelectorType = .singleValue
-    
-    //MARK:- Visual Traits
-    //MARK: User-Definable
-    
-    /**
-     * The background image used by the bar.
-     */
-    @IBInspectable var barImage: UIImage? = UIImage(named: "RangeSelectorBarBackground.png")
-    
-    /**
-     * The width of the central line.
-     */
-    @IBInspectable var lineWidth: CGFloat = 2.0
-    
-    /**
-     * The height of the bar itself.
-    */
-    @IBInspectable let barHeight: CGFloat = 29.0
-    
-    /**
-     * The margin between the bottom of the bar and the bottom of the view (you probably don't want to alter this).
-    */
-    let bottomMargin: CGFloat = 8
-    
-    /**
-     * The distance by which the line extends beyond the bar itself.
-    */
-    @IBInspectable let lineExtension: CGFloat = 5.0
-    
-    //MARK: Calculated
-    private var lineHeight: CGFloat { return barHeight + lineExtension }
-    
-    
-    
-    var isSwapping = false
-    var maxActive = false {
-        didSet {
-            self.updatePositions(true)
-        }
-    }
-    
-    var minValueIndex: Int {
-        return self.currentMinValue
-    }
-    
-    var maxValueIndex: Int {
-        return self.currentMaxValue
-    }
-    
-    var minValueString: String {
-        return self.valueForIndex(self.currentMinValue)
-    }
-    
-    var maxValueString: String {
-        return self.valueForIndex(self.currentMaxValue)
-    }
-    
-    var currentMinValue = 0 {
-        didSet {
-            self.sendActions(for: UIControlEvents.valueChanged)
-            self.updateLabelContent()
-        }
-    }
-    
-    var currentMaxValue = 0 {
-        didSet {
-            self.sendActions(for: UIControlEvents.valueChanged)
-            self.updateLabelContent()
-        }
-    }
-    
+    //MARK:- Range Variables
+    //MARK: Values to be Used
     /**
      * An array of string values that can be displayed instaed of just a range of numbers. These will take precedence over the TotalRange.
-    */
+     */
     var valuesToScrollThrough: [String]? {
         didSet {
             if self.valuesToScrollThrough != nil {
@@ -98,7 +29,6 @@ enum RangeSelectorType: Int {
         }
     }
     
-    private var _totalRange: Int?
     /**
      * The total range of values that will be displayed to the user. Set this if you are just hoping to display a range of numerical values. If you are using valuesToScrollThrough, you do not need to set this at all.
      */
@@ -118,10 +48,131 @@ enum RangeSelectorType: Int {
         }
     }
     
+    //MARK: Current Values
+    /**
+     * The current min value of the range selector (Int)
+    */
+    var currentMinValue = 0 {
+        didSet {
+            self.sendActions(for: UIControlEvents.valueChanged)
+            self.updateLabelContent()
+        }
+    }
+    
+    /**
+     * The current max value of the range selector (Int).
+     */
+    var currentMaxValue = 0 {
+        didSet {
+            self.sendActions(for: UIControlEvents.valueChanged)
+            self.updateLabelContent()
+        }
+    }
+    
+    /**
+     * The current min value of the range selector if you are using custom values (String).
+     */
+    var currentMinValueString: String? {
+        return self.valueForIndex(self.currentMinValue)
+    }
+    
+    /**
+     * The current max value of the range selector if you are using custom values (String).
+     */
+    var currentMaxValueString: String? {
+        return self.valueForIndex(self.currentMaxValue)
+    }
+    
+    
+    //MARK:- Visual Traits
+    //MARK: User-Definable
+    /**
+     * The background image used by the bar.
+     */
+    @IBInspectable var barImage: UIImage? = UIImage(named: "RangeSelectorBarBackground.png")
+    
+    /**
+     * The width of the central line.
+     */
+    @IBInspectable var lineWidth: CGFloat = 2.0
+    
+    /**
+     * The colour of the bars.
+    */
+    @IBInspectable var barColor: UIColor = .blue
+    
+    
+    /**
+     * The colour of the min bar (will use barColor if not set)
+    */
+    var minBarColor: UIColor {
+        get {
+            if _minBarColor != nil {
+                return _minBarColor!
+            } else {
+                return barColor
+            }
+        }
+        
+        set {
+            _minBarColor = newValue
+        }
+    }
+    
+    /**
+     * The colour of the max bar (will use barColor if not set)
+     */
+    var maxBarColor: UIColor {
+        get {
+            if _maxBarColor != nil {
+                return _maxBarColor!
+            } else {
+                return barColor
+            }
+        }
+        
+        set {
+            _maxBarColor = newValue
+        }
+    }
+    
+    
     /**
      * Adjusts the gap between each variable. Default is 30.
-    */
+     */
     var gapBetweenValues: CGFloat = 30.0
+    
+    /**
+     * The height of the bar itself.
+    */
+    let barHeight: CGFloat = 29.0
+    
+    /**
+     * The margin between the bottom of the bar and the bottom of the view (you probably don't want to alter this).
+    */
+    let bottomMargin: CGFloat = 8
+    
+    /**
+     * The distance by which the line extends beyond the bar itself.
+    */
+    let lineExtension: CGFloat = 5.0
+    
+    //MARK: Calculated
+    private var lineHeight: CGFloat { return barHeight + lineExtension }
+    
+    
+    //MARK: Helpers
+    private var _minBarColor: UIColor?
+    private var _maxBarColor: UIColor?
+    
+    private var _totalRange: Int?
+    
+    private var isSwapping = false
+    private var maxActive = false {
+        didSet {
+            self.updatePositions(true)
+        }
+    }
     
     private var _sidePadding: CGFloat?
     private var sidePadding: CGFloat {
@@ -269,7 +320,7 @@ enum RangeSelectorType: Int {
     }
     
     override var intrinsicContentSize : CGSize {
-        return CGSize(width: 300, height: 84)
+        return CGSize(width: UIScreen.main.bounds.width, height: 84)
     }
     
     //MARK: Data Retrieval based on Scroll Position
